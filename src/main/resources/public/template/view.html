@@ -1,0 +1,47 @@
+<div class="jumbotron">
+    <h3>{{topic.title}}</h3>
+
+    <p>
+        {{topic.description}}
+    </p>
+
+    <div class="text-right">
+        <a class="btn btn-primary" href="#/edit/{{topic.id}}">
+            <i class="glyphicon glyphicon-cog"></i> Edit
+        </a>
+        <a class="btn btn btn-danger" href="#/delete/{{topic.id}}">
+            <i class="glyphicon glyphicon-trash"></i> Delete
+        </a>
+    </div>
+</div>
+
+<br>
+
+<div ng-if="comments.length > 0" class="row">
+    <div class="col-md-10 col-md-offset-2">
+        <h4>Comments</h4>
+        <div ng-repeat="comment in comments">
+            <p><i class="glyphicon glyphicon-user"></i> {{comment.name}}</p>
+            <p class="alert alert-info">{{comment.detail}}</p>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div>
+    <h4>Reply</h4>
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" ng-model="commentName" id="name" placeholder="Reply Name">
+        </div>
+        <div class="form-group">
+            <label for="detail">Detail</label>
+            <textarea class="form-control" id="detail" ng-model="commentDetail"></textarea>
+        </div>
+        <a class="btn btn-primary" ng-click="submitComment()">
+            <i class="glyphicon glyphicon-send"></i> Reply
+        </a>
+    </form>
+</div>

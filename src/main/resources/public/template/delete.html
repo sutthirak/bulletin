@@ -1,0 +1,21 @@
+<h3>Delete Topic</h3>
+
+<div class="alert alert-danger" ng-show="isError">
+    Your data is incorrect. Please input correct password.
+</div>
+
+<form>
+
+    <div class="form-group">
+        <label for="writerPassword">Please input password before delete</label>
+        <input type="password" class="form-control" id="writerPassword" ng-model="deletePassword" placeholder="Your Password">
+    </div>
+
+    <a class="btn btn-danger" ng-click="deleteTopic()">
+        <i class="glyphicon glyphicon-trash"></i> Delete
+    </a>
+    <a class="btn btn-primary" href="#/index">
+        <i class="glyphicon glyphicon-arrow-left"></i> Cancel
+    </a>
+
+</form>

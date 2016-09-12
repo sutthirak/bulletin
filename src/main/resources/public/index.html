@@ -1,0 +1,29 @@
+<html lang="en" ng-app="bulletinApp">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body ng-controller="bulletinCtrl" ng-init="init()">
+
+    <div class="container">
+        <div class="col-md-10 col-md-offset-1 col-xs-12">
+            <h1>Bulletin</h1>
+            <div ng-view autoscroll="true"></div>
+        </div>
+    </div>
+
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/lib/angular-animate.min.js"></script>
+    <script src="js/lib/angular-aria.min.js"></script>
+    <script src="js/lib/angular-route.min.js"></script>
+    <script src="js/lib/angular-messages.min.js"></script>
+
+    <script src="js/service/topic.js"></script>
+    <script src="js/controller/app-controller.js"></script>
+
+
+</body>
+</html>
