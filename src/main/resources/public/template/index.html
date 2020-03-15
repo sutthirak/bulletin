@@ -1,6 +1,8 @@
+<!--
 <div class="text-right">
     <a class="btn btn-primary" href="#/new"><i class="glyphicon glyphicon-pencil"></i> Write</a>
 </div>
+-->
 
 <br>
 
@@ -16,46 +18,18 @@
             <th width="10%">Delete</th>
         </tr>
     </thead>
+    <!--
     <tbody>
         <tr ng-repeat="topic in topics.content">
-            <td><a href="#/view/{{topic.id}}">{{topic.title}}</a></td>
-            <td>{{topic.writerName}}</td>
-            <td>{{topic.createdDate}}</td>
-            <td align="center">{{topic.numberOfView}}</td>
-            <td>
-                <a class="btn btn-primary" href="#/edit/{{topic.id}}">
-                    <i class="glyphicon glyphicon-cog"></i> Edit
-                </a>
-            </td>
-            <td>
-                <a class="btn btn-danger" href="#/delete/{{topic.id}}">
-                    <i class="glyphicon glyphicon-trash"></i> Delete
-                </a>
-            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
     </tbody>
+    -->
 </table>
 </div>
 
-<br>
-
-<div class="text-center">
-    <strong>
-        Page {{currentPage + 1}} / {{topics.totalPages}} , Total Records : {{topics.totalElements}}
-    </strong>
-</div>
-
-<br>
-
-<div class="text-center">
-
-    <form class="form-inline">
-        <div class="form-group">
-            <div class="input-group">
-                <input type="number" min="1" max="{{topics.totalPages}}" ng-model="redirectPage" class="form-control">
-            </div>
-        </div>
-        <button class="btn btn-primary" ng-click="redirect()">Go</button>
-    </form>
-
-</div>
